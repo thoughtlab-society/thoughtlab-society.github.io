@@ -4,224 +4,485 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Thought Lab is a student-led physics community exploring research, ideas and the universe.">
-  <title>Thought Lab | Physics, Research & Ideas</title>
+  <meta name="description" content="Thought Lab — A Physics Society exploring research, ideas and scientific discoveries.">
+  <title>Thought Lab — A Physics Society</title>
+
   <style>
+    :root {
+      --black: #080808;
+      --white: #ffffff;
+      --paper: #fafafa;
+      --grey: #666666;
+      --line: #e5e5e5;
+      --accent: #a51f2b;
+    }
+
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f8fc;
-      color: #172033;
+      background: var(--white);
+      color: var(--black);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
-    a { text-decoration: none; }
-    .wrap { width: min(1080px, 90%); margin: auto; }
+
+    a { color: inherit; }
+    .container { width: min(1100px, 90%); margin: auto; }
+
     header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      position: sticky;
-      top: 0;
+      background: var(--black);
+      color: var(--white);
+      border-bottom: 1px solid #292929;
     }
-    nav {
-      min-height: 72px;
+
+    .topbar {
+      min-height: 82px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
       padding: 12px 0;
     }
-    .brand { font-size: 1.35rem; font-weight: 800; color: #172033; }
-    .brand span { color: #6254e8; }
-    .links { display: flex; flex-wrap: wrap; gap: 18px; }
-    .links a { color: #334155; font-size: .92rem; }
-    .hero {
-      padding: 100px 0;
-      background: radial-gradient(circle at 85% 20%, #c7d2fe, transparent 32%),
-                  linear-gradient(135deg, #eef2ff, #f8fafc);
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+      flex-shrink: 0;
     }
-    .eyebrow {
-      color: #5145cd;
-      font-size: .8rem;
-      font-weight: bold;
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      background: black;
+    }
+
+    .brand-name {
+      font-size: 1.15rem;
+      font-weight: 800;
       letter-spacing: 2px;
-      text-transform: uppercase;
+      line-height: 1.3;
     }
+
+    .brand-name small {
+      display: block;
+      color: #bdbdbd;
+      font-size: .63rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      margin-top: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 19px;
+    }
+
+    nav a {
+      color: #e5e5e5;
+      font-size: .83rem;
+      text-decoration: none;
+    }
+
+    nav a:hover, .text-link:hover { text-decoration: underline; }
+
+    .hero {
+      padding: 95px 0 82px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--accent);
+    }
+
     h1 {
       max-width: 800px;
-      font-size: clamp(2.8rem, 7vw, 5rem);
+      margin: 20px 0;
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
       line-height: 1.08;
-      letter-spacing: -2px;
-      margin: 18px 0;
+      letter-spacing: -2.5px;
     }
-    .hero p, .intro { max-width: 680px; color: #64748b; font-size: 1.08rem; }
+
+    .hero p {
+      max-width: 650px;
+      color: #555;
+      font-size: 1.08rem;
+    }
+
     .button {
       display: inline-block;
-      background: #5145cd;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      margin: 14px 8px 0 0;
-      font-weight: bold;
+      margin: 15px 10px 0 0;
+      padding: 11px 18px;
+      background: var(--black);
+      color: var(--white);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
     }
-    .button.light { background: white; color: #172033; border: 1px solid #e2e8f0; }
-    section { padding: 68px 0; }
-    h2 { font-size: 2rem; letter-spacing: -1px; margin: 0 0 8px; }
+
+    .button.outline {
+      background: white;
+      color: black;
+      border: 1px solid #aaa;
+    }
+
+    section { padding: 65px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .number {
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      letter-spacing: -.8px;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .intro {
+      max-width: 700px;
+      color: var(--grey);
+      margin: 12px 0 25px;
+    }
+
+    .featured {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 30px;
+      margin-top: 24px;
+    }
+
+    .tag {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    h3 { line-height: 1.35; }
+
+    .feature-card h3 {
+      max-width: 720px;
+      font-size: 1.55rem;
+      margin: 12px 0;
+    }
+
+    .feature-card p { max-width: 720px; color: var(--grey); }
+
+    .text-link {
+      font-size: .9rem;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
-      margin-top: 28px;
+      margin-top: 26px;
     }
+
     .card {
-      background: white;
+      border: 1px solid var(--line);
       padding: 24px;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
+      background: white;
     }
-    .card h3 { margin: 10px 0 6px; }
-    .card p { color: #64748b; font-size: .95rem; margin-bottom: 0; }
-    .symbol { font-size: 1.8rem; }
-    .alt { background: white; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-    .note { background: #eef2ff; border-radius: 10px; padding: 20px; margin-top: 24px; }
-    footer { padding: 28px 0; color: #64748b; font-size: .9rem; }
-    footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    @media (max-width: 600px) {
-      .hero { padding: 68px 0; }
-      h1 { letter-spacing: -1px; }
-      .links { gap: 10px 14px; }
+
+    .card h3 { font-size: 1.15rem; margin: 10px 0 7px; }
+
+    .card p { color: var(--grey); font-size: .94rem; margin: 0 0 15px; }
+
+    .card .num {
+      font-size: .75rem;
+      letter-spacing: 1px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .alt { background: var(--paper); }
+
+    .notice {
+      margin-top: 25px;
+      border-left: 3px solid var(--black);
+      padding: 15px 20px;
+      background: white;
+      color: #555;
+      font-size: .92rem;
+    }
+
+    footer {
+      padding: 35px 0;
+      background: var(--black);
+      color: #d0d0d0;
+      font-size: .85rem;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    footer p { margin: 5px 0; }
+    footer a { color: white; }
+
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; gap: 15px; }
+      nav { justify-content: flex-start; gap: 9px 15px; }
+      .hero { padding: 65px 0; }
+      h1 { letter-spacing: -1.3px; }
+      .grid { grid-template-columns: 1fr; }
+      .feature-card { padding: 22px; }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <nav class="wrap">
-      <a class="brand" href="#home">THOUGHT<span> LAB</span></a>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#resources">Resources</a>
+    <div class="container topbar">
+      <a class="brand" href="#home" aria-label="Thought Lab home">
+        <img src="logo.jpeg" alt="Thought Lab — A Physics Society logo">
+        <span class="brand-name">
+          THOUGHT LAB
+          <small>A PHYSICS SOCIETY</small>
+        </span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#blog">Physics Blog</a>
+        <a href="#decoded">Research Decoded</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#projects">Projects</a>
         <a href="#activities">Activities</a>
-      </div>
-    </nav>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="wrap">
-        <div class="eyebrow">Physics · Research · Curiosity</div>
-        <h1>Every great idea starts with a question.</h1>
+      <div class="container">
+        <div class="eyebrow">Physics · Research · Scientific Curiosity</div>
+        <h1>Physics is more than equations.</h1>
         <p>
-          Welcome to Thought Lab, a student-led community exploring physics,
-          sharing knowledge and building a deeper understanding of the universe.
+          Let's explore how we know what we know. Thought Lab is a student
+          physics society interested in understanding scientific ideas,
+          reading research and asking better questions about the universe.
         </p>
-        <a class="button" href="#research">Explore our work</a>
-        <a class="button light" href="#about">About Thought Lab</a>
+        <a class="button" href="#decoded">Explore Research Decoded</a>
+        <a class="button outline" href="#about">About the Society</a>
       </div>
     </section>
 
-    <section id="about">
-      <div class="wrap">
-        <h2>A space to think beyond textbooks.</h2>
+    <section class="featured">
+      <div class="container">
+        <div class="eyebrow">From Thought Lab</div>
+        <div class="section-head">
+          <span class="number">01</span>
+          <h2>What's happening</h2>
+        </div>
         <p class="intro">
-          Thought Lab brings curious students together to discuss scientific
-          ideas, explore research and learn from one another. You don't need
-          to know everything to begin. Curiosity is enough.
+          Our current focus is reading and analysing review papers,
+          learning how scientific arguments are built, and communicating
+          what we learn clearly.
         </p>
+
+        <article class="feature-card">
+          <div class="tag">Current focus · Research reading</div>
+          <h3>Understanding research, one paper at a time.</h3>
+          <p>
+            We're beginning with review-paper analysis. Our aim is to
+            understand the central questions, connect ideas across the
+            literature, and identify what a paper explains—and what it
+            leaves open.
+          </p>
+          <a class="text-link" href="#reviews">Explore Reviews & Perspectives →</a>
+        </article>
       </div>
     </section>
 
-    <section id="research">
-      <div class="wrap">
-        <h2>Research & Projects</h2>
-        <p class="intro">Ideas worth exploring, questions worth asking.</p>
+    <section id="blog">
+      <div class="container">
+        <div class="section-head">
+          <span class="number">02</span>
+          <h2>Physics Blog</h2>
+        </div>
+        <p class="intro">
+          Physics explained in accessible language, from fundamental
+          concepts to the discoveries that changed our picture of nature.
+        </p>
         <div class="grid">
           <article class="card">
-            <div class="symbol">🔭</div>
-            <h3>Research Reading</h3>
-            <p>Accessible discussions and reviews of scientific papers.</p>
+            <div class="num">CONCEPTS & QUESTIONS</div>
+            <h3>How does GPS use relativity?</h3>
+            <p>A future beginner-friendly article connecting relativity to everyday technology.</p>
           </article>
           <article class="card">
-            <div class="symbol">🧪</div>
-            <h3>Student Projects</h3>
-            <p>Experiments, investigations and independent projects.</p>
+            <div class="num">ASTROPHYSICS</div>
+            <h3>What is a neutron star?</h3>
+            <p>A future introduction to one of the most extreme objects in the universe.</p>
           </article>
-          <article class="card">
-            <div class="symbol">✍️</div>
-            <h3>Scientific Writing</h3>
-            <p>Explanations and original work from our community.</p>
-          </article>
+        </div>
+        <p class="intro">These are planned topics, not published articles yet.</p>
+      </div>
+    </section>
+
+    <section class="alt" id="decoded">
+      <div class="container">
+        <div class="section-head">
+          <span class="number">03</span>
+          <h2>Research Decoded</h2>
+        </div>
+        <p class="intro">
+          A guided reading of real scientific papers: their questions,
+          background, methods, figures, findings and limitations.
+        </p>
+        <div class="feature-card">
+          <div class="tag">Signature series</div>
+          <h3>From a research paper to a clearer understanding.</h3>
+          <p>
+            Each analysis will identify the original paper, explain its
+            central question, discuss the evidence and key figures, and
+            distinguish the authors' conclusions from our interpretation.
+          </p>
+          <p><strong>Our first analyses are being prepared.</strong></p>
         </div>
       </div>
     </section>
 
-    <section id="resources" class="alt">
-      <div class="wrap">
-        <h2>Learning Resources</h2>
-        <p class="intro">A growing library for curious physics students.</p>
+    <section id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <span class="number">04</span>
+          <h2>Reviews & Perspectives</h2>
+        </div>
+        <p class="intro">
+          Longer, critical readings of the scientific literature. We
+          examine what the evidence supports, where the limitations lie,
+          and how a paper relates to other work.
+        </p>
+        <div class="notice">
+          We are starting with review-paper analysis. New pieces will be
+          added here as they are completed and checked. We will clearly
+          distinguish a summary of a paper from our own critical assessment.
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="number">05</span>
+          <h2>Student Projects</h2>
+        </div>
+        <p class="intro">
+          Small investigations that turn physics ideas into something
+          we can explore, calculate, simulate or measure.
+        </p>
         <div class="grid">
           <article class="card">
-            <div class="symbol">📚</div>
-            <h3>Study Material</h3>
-            <p>Notes, topic guides and recommended books.</p>
+            <h3>Experiments & Simulations</h3>
+            <p>Practical investigations and simple computational models.</p>
           </article>
           <article class="card">
-            <div class="symbol">🌌</div>
-            <h3>Astronomy & Space</h3>
-            <p>Resources to explore the universe and astrophysics.</p>
-          </article>
-          <article class="card">
-            <div class="symbol">💻</div>
-            <h3>Scientific Tools</h3>
-            <p>Useful simulations, coding tools and learning websites.</p>
+            <h3>Data & Coding</h3>
+            <p>Student exercises using scientific data and programming tools.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section id="activities">
-      <div class="wrap">
-        <h2>Beyond the Classroom</h2>
-        <p class="intro">Science grows through collaboration and conversation.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>Workshops & Talks</h3>
-            <p>Learn new skills and discuss ideas with fellow students.</p>
-          </article>
-          <article class="card">
-            <h3>Quizzes & Challenges</h3>
-            <p>Activities that make scientific thinking engaging.</p>
-          </article>
-          <article class="card">
-            <h3>Club Events</h3>
-            <p>Updates on meetings, events and community activities.</p>
-          </article>
+      <div class="container">
+        <div class="section-head">
+          <span class="number">06</span>
+          <h2>Activities & Events</h2>
         </div>
-        <div class="note">
-          <strong>More coming soon.</strong><br>
-          Research articles, event reports and learning materials will be
-          added as Thought Lab grows.
+        <p class="intro">
+          Paper-reading sessions, discussions, guest talks, quizzes,
+          workshops and reports from society activities.
+        </p>
+        <div class="notice">
+          Upcoming activities and event reports will be announced here
+          once dates and details are confirmed.
         </div>
       </div>
     </section>
 
-    <section id="contact" class="alt">
-      <div class="wrap">
-        <h2>Have a question or an idea?</h2>
+    <section class="alt" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="number">07</span>
+          <h2>About & Contribute</h2>
+        </div>
         <p class="intro">
-          Thought Lab welcomes students who want to learn, explore and contribute.
-          Contact information will be added here.
+          Thought Lab is a physics society built around curiosity,
+          collaborative learning and engagement with scientific research.
+          We believe that learning science includes asking questions,
+          examining evidence and explaining ideas honestly.
         </p>
+        <div class="grid">
+          <article class="card">
+            <h3>Our approach</h3>
+            <p>
+              Clear explanations, reliable citations, respect for original
+              research, and honest discussion of uncertainty and limitations.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Contribute to Thought Lab</h3>
+            <p>
+              Students interested in writing, paper reading, projects or
+              organising activities can contribute as the society grows.
+            </p>
+          </article>
+        </div>
+        <div class="notice">
+          Submission guidelines, team information and contact details
+          will be published here when they are ready.
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <span>© 2026 Thought Lab</span>
-      <span>Question. Explore. Discover.</span>
+    <div class="container footer-row">
+      <div>
+        <strong>THOUGHT LAB</strong>
+        <p>A Physics Society</p>
+      </div>
+      <div>
+        <p>Question. Explore. Understand.</p>
+        <p>© 2026 Thought Lab</p>
+      </div>
     </div>
   </footer>
 </body>
