@@ -1,0 +1,27 @@
+media:
+  - name: images
+    label: Images
+    input: images
+    output: /images
+content:
+  - name: blog
+    label: Physics Blog
+    type: collection
+    path: content/blog
+    format: yaml
+    filename: "{primary}.yml"
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: category, label: Category, type: string }
+      - { name: summary, label: Summary, type: text }
+      - { name: body, label: Article, type: text }
+  - name: activities
+    label: Activities & Events
+    type: collection
+    path: content/activities
+    format: yaml
+    filename: "{primary}.yml"
+    fields:
+      - { name: title, label: Event title, type: string, required: true }
+      - { name: date, label: Date, type: string }
+      - { name: description, label: Description, type: text }
