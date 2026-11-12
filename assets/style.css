@@ -84,18 +84,11 @@ body:not(.quanta-site) .home-hero h1{font-size:clamp(3.1rem,6.4vw,5.8rem);line-h
 .q-brand{gap:13px}
 .q-brand>span{font-family:'Playfair Display',Georgia,serif;font-size:.94rem;letter-spacing:.19em}
 .q-brand small{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.15em;color:#c9b9c7}
-.q-field-art{position:absolute;width:min(48vw,590px);height:470px;right:3%;top:50%;transform:translateY(-50%);overflow:hidden;pointer-events:none;opacity:.92}
-.q-field-lens{position:absolute;width:310px;height:310px;right:18%;top:17%;border-radius:50%;background:radial-gradient(circle at 50% 50%,#090d1c 0 27%,#e6b8db18 28% 29%,transparent 30%),conic-gradient(from 15deg,transparent,#d5a8cf55,transparent 22%,#8b9ce633,transparent 55%,#d7b2d155,transparent 82%);filter:drop-shadow(0 0 34px #b58acb35)}
-.q-field-lens:before,.q-field-lens:after{content:'';position:absolute;inset:-28px;border:1px solid #d7b2d155;border-radius:50%;transform:scaleY(.34) rotate(-18deg)}
-.q-field-lens:after{inset:-65px;border-color:#8e9fd044;transform:scaleY(.24) rotate(19deg)}
-.q-field-grid{position:absolute;width:130%;height:58%;left:-10%;bottom:-3%;border-radius:50% 50% 0 0;background:repeating-linear-gradient(0deg,transparent 0 18px,#b995c52b 19px 20px),repeating-linear-gradient(90deg,transparent 0 25px,#91a5d126 26px 27px);transform:perspective(340px) rotateX(62deg) rotateZ(-9deg);mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
-.q-formula{position:absolute;font-family:Georgia,serif;font-style:italic;color:#d9b8d5aa;font-size:1.2rem}
-.q-formula-one{right:4%;top:17%}.q-formula-two{right:11%;bottom:20%;font-size:1rem}
-.q-field-caption{position:absolute;left:12%;bottom:16%;font:10px 'DM Sans',sans-serif;letter-spacing:.22em;color:#c9a9c8a8}
-@media(max-width:850px){.q-field-art{right:-20%;opacity:.43;width:75vw}.q-brand-logo{width:54px;height:42px}}
-@media(max-width:520px){.q-field-art{right:-48%;width:100vw;opacity:.3}.q-brand-logo{width:48px;height:38px}}
-
-
+/* Quanta hero: quantum interference graphic, preserving the existing layout */
+.q-field-art{position:absolute;width:min(48vw,590px);height:470px;right:3%;top:50%;transform:translateY(-50%);pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:visible}
+.q-interference-art{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 35px #9c62df22)}
+@media(max-width:850px){.q-field-art{right:-3%;width:58vw;height:390px;opacity:.86}.q-brand-logo{width:54px;height:42px}}
+@media(max-width:520px){.q-field-art{right:-2%;width:78vw;height:330px;opacity:.72}.q-brand-logo{width:48px;height:38px}}
 /* Editorial typography + independent Thought Lab homepage hero */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 :root{--text:#f2eee9;--muted:#c1b8bd;--accent:#c5a6f2;--violet:#d0b5ec;--line:#3a3045;--bg:#090a16}
@@ -153,3 +146,10 @@ nav a{font-family:'DM Sans',sans-serif;color:#d1c7d4}
 .q-review-intro{padding:72px 0 20px}.q-review-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}.q-review-grid h2{font:500 clamp(2.2rem,4vw,3.6rem)/1.1 'Playfair Display',Georgia,serif;margin:16px 0}.q-review-grid h2 em{color:#d2a8ce}.q-review-grid p{color:var(--q-muted);line-height:1.85;margin-top:0}
 @media(max-width:900px){.home-hero-grid{grid-template-columns:1fr;gap:8px;padding-top:45px}.home-feature{min-height:330px;margin:0 0 20px}.home-feature-image{inset:0 12% 20px 8%}.home-feature-orbit{right:5%;top:-5px}.q-hero{grid-template-columns:1fr;padding:0 24px}.q-hero-inner{padding:65px 0 5px}.q-field-art{height:340px;margin-top:-10px}.q-field-lens{width:235px;height:235px;right:25%;top:2%}.q-visual-note{right:3%;bottom:0}.q-review-grid{grid-template-columns:1fr;gap:12px}.contact-grid{grid-template-columns:1fr;gap:8px}}
 @media(max-width:560px){.home-hero-grid{min-height:0;padding-top:36px;padding-bottom:35px}.home-hero-copy{padding:10px 0}.home-feature{min-height:290px}.home-feature-card{width:88%;padding:17px}.home-feature-orbit{width:82px;height:82px;font-size:.8rem}.home-feature-orbit span,.home-feature-orbit small{font-size:6px}.contact-section{padding:55px 0}.contact-email{font-size:.82rem;max-width:100%;gap:8px;padding:11px}.q-hero{padding:0 18px}.q-hero-inner{padding:52px 0 0}.q-field-art{height:290px}.q-field-lens{width:195px;height:195px;right:24%;top:0}.q-visual-note{width:190px;padding:12px}.q-visual-note strong{font-size:1.15rem}.q-formula-one{right:0}.q-formula-two{right:0;bottom:24%}.q-review-intro{padding:50px 0 10px}}
+
+/* Mobile event photography: preserve full image instead of cropping faces/details */
+@media(max-width:850px){
+  .event-hero-image img,.feature-photo img,.event-gallery img,.event-gallery .gallery-wide img{
+    height:auto;max-height:none;object-fit:contain;object-position:center;background:#080d19;
+  }
+}
