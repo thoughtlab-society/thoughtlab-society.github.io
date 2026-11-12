@@ -13,3 +13,27 @@
 .home-belief{padding:75px 0;background:#0b1220a8;border-bottom:1px solid #1c2941}.belief-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}.home-belief h2,.home-branches h2,.home-ways h2{font-size:clamp(2.3rem,5vw,4rem);line-height:1.05;letter-spacing:-.065em;margin:16px 0}.belief-copy p{font-size:1.12rem;color:var(--muted);max-width:720px}.text-link{display:inline-block;margin-top:10px;font-weight:700}.text-link span{padding-left:8px}.home-branches,.home-ways{padding:78px 0}.section-heading{max-width:720px}.section-heading h2{margin-top:13px}.section-heading p{color:var(--muted);max-width:620px}.branch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:32px}.branch-card{position:relative;overflow:hidden;min-height:235px;padding:24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#111a2e,#0b1221)}.branch-card:after{content:'';position:absolute;width:150px;height:150px;right:-60px;bottom:-70px;border-radius:50%;border:1px solid #9bdcff20;box-shadow:0 0 50px #9bdcff0a}.branch-symbol{font-size:2.5rem;line-height:1;color:var(--accent);margin-bottom:20px}.branch-card .tag{color:var(--violet)}.branch-card h3{font-size:1.25rem;margin:8px 0}.branch-card p{font-size:.9rem;color:var(--muted);margin:0;max-width:330px}.branch-em .branch-symbol{color:#c4b4ff}.branch-thermo .branch-symbol{color:#ffbd8d}.branch-relativity .branch-symbol{color:#a5e5c6}.branch-optics .branch-symbol{color:#f0d88d}.branch-mechanics .branch-symbol{color:#9ed9ff}.ways-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}.way-card{display:block;padding:23px;border:1px solid var(--line);border-radius:15px;background:#0d1526;color:var(--text);transition:transform .18s,border-color .18s}.way-card:hover{transform:translateY(-3px);border-color:#6d8ab3}.way-card h3{font-size:1.15rem;margin:12px 0}.way-card h3 span{float:right;color:var(--accent)}.way-card p{font-size:.88rem;color:var(--muted);margin:0}.way-card .tag{color:var(--accent)}
 @media(max-width:850px){.home-hero-grid,.belief-grid{grid-template-columns:1fr;gap:25px}.home-hero{padding:55px 0}.home-visual{height:350px}.branch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ways-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.home-hero h1{font-size:3.3rem}.home-visual{height:300px;transform:scale(.92);margin:-10px}.orbit-three{width:340px;height:340px}.orbit-two{width:320px;height:220px}.branch-grid,.ways-grid{grid-template-columns:1fr}.branch-card{min-height:190px}.home-belief,.home-branches,.home-ways{padding:55px 0}}
+
+
+/* Thought Lab homepage refinement — scoped to index.html classes */
+.home-hero-grid{grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);gap:clamp(28px,5vw,64px);min-height:560px}
+.home-hero-copy{max-width:650px}
+.home-hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.055em;line-height:1.02;font-size:clamp(3.2rem,6.2vw,5.7rem)}
+.home-intro{line-height:1.8;max-width:570px}
+.home-visual{height:clamp(330px,38vw,500px);min-width:0;position:relative;display:block;overflow:hidden;border:1px solid #52617c66;border-radius:22px;background:#0b1221;box-shadow:0 24px 80px #0005}
+.home-hero-image{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:22px;opacity:.92}
+.home-visual:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,#070b16a8);pointer-events:none}
+.home-image-caption{position:absolute;z-index:2;left:22px;bottom:20px;font:10px 'DM Mono',monospace;letter-spacing:.18em;color:#f0e8dc}
+.site-header .bar{min-height:82px}
+.site-header nav{gap:clamp(10px,1.5vw,20px)}
+.site-header nav a{font-size:.82rem;white-space:nowrap}
+@media(max-width:850px){
+ .home-hero-grid{grid-template-columns:1fr;min-height:0;gap:30px}
+ .home-visual{height:clamp(260px,55vw,390px);margin:0}
+ .home-hero-copy{max-width:100%}
+}
+@media(max-width:520px){
+ .home-hero h1{font-size:clamp(2.8rem,12vw,4rem)}
+ .home-visual{height:260px}
+ .home-image-caption{left:14px;bottom:14px;font-size:9px}
+}
