@@ -37,3 +37,98 @@
  .home-visual{height:260px}
  .home-image-caption{left:14px;bottom:14px;font-size:9px}
 }
+/* QUANTA — independent dark cosmic editorial identity */
+.quanta-site{--q-bg:#070b18;--q-panel:#0d1427;--q-line:#263653;--q-text:#edf2ff;--q-muted:#aab6d0;--q-blue:#8bdcff;--q-purple:#b9a4ff;background:radial-gradient(ellipse at 50% -25%,#263a70 0,transparent 48%),var(--q-bg);color:var(--q-text);font-family:Manrope,system-ui,sans-serif}
+.q-wrap{width:min(1120px,calc(100% - 40px));margin:auto}.quanta-header{position:sticky;top:0;z-index:20;background:#070b18ef;backdrop-filter:blur(16px);border-bottom:1px solid var(--q-line)}.q-bar{min-height:78px;display:flex;align-items:center;gap:28px;justify-content:space-between}.q-brand{display:flex;align-items:center;gap:11px;color:var(--q-text);font-weight:800;letter-spacing:.15em;font-size:.8rem}.q-brand small{display:block;font:9px 'DM Mono',monospace;letter-spacing:.13em;color:var(--q-muted);margin-top:4px}.q-mark{font-size:2rem;letter-spacing:-.12em;color:var(--q-blue)}.q-mark span,.q-wordmark span,.q-empty-symbol span{color:var(--q-purple)}.q-nav{display:flex;gap:20px;justify-content:center}.q-nav a,.q-back{font-size:.76rem;color:var(--q-muted)}.q-nav a[aria-current=page]{color:var(--q-blue)}.q-back{white-space:nowrap;border:1px solid var(--q-line);border-radius:99px;padding:8px 12px}
+.q-hero{min-height:590px;position:relative;overflow:hidden;display:flex;align-items:center;border-bottom:1px solid var(--q-line);background:radial-gradient(ellipse at 75% 48%,#573c9b42,transparent 35%),radial-gradient(ellipse at 58% 62%,#176c9b36,transparent 42%),linear-gradient(115deg,#090e20,#0b1124 55%,#10152d)}.q-hero:before{content:'';position:absolute;inset:0;background-image:radial-gradient(1px 1px at 12% 22%,#fff 98%,transparent),radial-gradient(1px 1px at 28% 72%,#c8d8ff 98%,transparent),radial-gradient(2px 2px at 67% 18%,#fff 98%,transparent),radial-gradient(1px 1px at 85% 67%,#fff 98%,transparent),radial-gradient(1px 1px at 45% 38%,#fff 98%,transparent);background-size:190px 170px;opacity:.65}.q-nebula{position:absolute;border-radius:50%;filter:blur(42px);pointer-events:none}.q-nebula-one{width:370px;height:270px;right:5%;top:15%;background:#7046a833;transform:rotate(-28deg)}.q-nebula-two{width:420px;height:180px;right:18%;bottom:8%;background:#1e82a833;transform:rotate(22deg)}.q-hero-inner{position:relative;z-index:2;padding:85px 0}.q-kicker{font:10px 'DM Mono',monospace;letter-spacing:.2em;color:var(--q-blue);text-transform:uppercase}.q-wordmark{font-size:clamp(4.8rem,13vw,9.6rem);line-height:.88;letter-spacing:-.105em;font-weight:800;margin:25px 0 20px}.q-hero h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.08;letter-spacing:-.065em;margin:0}.q-hero h1 em,.q-sections h2 em,.q-about-grid h2 em{font-family:Georgia,serif;font-weight:400;color:#b9a4ff}.q-lede{font-size:1.04rem;max-width:520px;color:var(--q-muted);margin:23px 0 38px}.q-hero-foot{display:flex;gap:25px;align-items:center;flex-wrap:wrap;font:10px 'DM Mono',monospace;letter-spacing:.12em;color:#8798ba}.q-hero-foot a{color:var(--q-blue);font:600 12px Manrope,sans-serif;letter-spacing:0}.q-orbit-art{position:absolute;width:440px;height:440px;right:7%;top:50%;transform:translateY(-50%);border:1px solid #9bdcff27;border-radius:50%;box-shadow:0 0 90px #3b72a51a}.q-orbit-art:before,.q-orbit-art:after,.q-orbit-art i{content:'';position:absolute;inset:12%;border:1px solid #a997ff35;border-radius:50%;transform:rotate(45deg) scaleY(.48)}.q-orbit-art:after{transform:rotate(-45deg) scaleY(.48);border-color:#7ddcff45}.q-orbit-art i:nth-child(1){inset:25%;transform:none;border-color:#9bdcff35}.q-orbit-art i:nth-child(2){inset:-5%;transform:rotate(70deg) scaleY(.43);border-color:#a997ff2b}.q-orbit-art i:nth-child(3){inset:6%;transform:rotate(-22deg) scaleY(.7);border-color:#7ddcff25}.q-orbit-art b{position:absolute;inset:0;display:grid;place-items:center;font-size:6rem;color:#d9edff;text-shadow:0 0 45px #6bbcff80}
+.q-intro-strip{border-bottom:1px solid var(--q-line);background:#0b1222}.q-intro-grid{display:grid;grid-template-columns:.55fr 1.45fr;gap:35px;align-items:center;padding:42px 0}.q-intro-grid p{font-size:1.02rem;color:var(--q-muted);max-width:720px;margin:0}.q-sections{padding:85px 0 100px}.q-sections h2,.q-about-grid h2{font-size:clamp(2.5rem,5vw,4.4rem);letter-spacing:-.07em;line-height:1.03;margin:16px 0 38px}.q-category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.q-category{display:block;min-height:215px;padding:25px;border:1px solid var(--q-line);border-radius:15px;color:var(--q-text);background:linear-gradient(145deg,#121d36,#0b1222);transition:.2s}.q-category:hover{transform:translateY(-4px);border-color:#7897c3;color:white}.q-category>span{font:10px 'DM Mono',monospace;letter-spacing:.15em;color:var(--q-blue)}.q-category h3{font-size:1.3rem;margin:35px 0 9px}.q-category h3 b{float:right;color:var(--q-purple)}.q-category p{font-size:.88rem;color:var(--q-muted);margin:0}
+.q-page-hero{padding:85px 0 55px;background:radial-gradient(ellipse at 78% 15%,#493c8040,transparent 40%);border-bottom:1px solid var(--q-line)}.q-page-hero h1{font-size:clamp(3rem,8vw,6rem);letter-spacing:-.08em;line-height:1;margin:18px 0}.q-page-hero p{max-width:650px;color:var(--q-muted);font-size:1.03rem}.q-empty-wrap{padding:65px 0 110px}.q-empty{display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:center;padding:34px;border:1px solid var(--q-line);border-radius:17px;background:linear-gradient(130deg,#141f39,#0b1222)}.q-empty-symbol{width:86px;height:86px;display:grid;place-items:center;border:1px solid #8bdcff70;border-radius:50%;font-size:3rem;font-weight:800;color:var(--q-blue)}.q-empty h2{font-size:1.5rem;margin:10px 0}.q-empty p,.q-about-grid p{color:var(--q-muted);max-width:680px}.q-inline-link{display:inline-block;margin-top:12px;color:var(--q-blue);font-weight:700;font-size:.88rem}.q-about-section{padding:75px 0 110px}.q-about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}.q-about-grid h2{margin-top:20px}.q-footer{border-top:1px solid var(--q-line);padding:25px 0;color:var(--q-muted);font-size:.78rem}.q-footer .q-wrap{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.q-footer strong{color:var(--q-text);letter-spacing:.15em}.q-footer a{margin-left:auto;color:var(--q-blue)}
+@media(max-width:850px){.q-bar{align-items:flex-start;flex-wrap:wrap;padding:14px 0;gap:13px}.q-nav{order:3;width:100%;justify-content:flex-start;gap:16px;flex-wrap:wrap}.q-orbit-art{right:-150px;opacity:.5}.q-category-grid{grid-template-columns:1fr}.q-category{min-height:170px}.q-about-grid{grid-template-columns:1fr;gap:12px}.q-intro-grid{grid-template-columns:1fr;gap:12px}}
+@media(max-width:520px){.q-wrap{width:calc(100% - 30px)}.q-hero{min-height:560px}.q-hero-inner{padding:65px 0}.q-orbit-art{width:300px;height:300px;right:-145px;top:58%;opacity:.35}.q-empty{grid-template-columns:1fr;padding:24px}.q-page-hero{padding:65px 0 42px}.q-empty-wrap,.q-about-section{padding:48px 0 75px}.q-sections{padding:65px 0 75px}.q-back{font-size:.68rem}}
+
+
+/* Quanta typography refinement — clearer publication masthead */
+.quanta-site{--q-muted:#c2bac8;--q-label:#c9a9c8;--q-accent:#d7b2d1}
+.q-wordmark{font-size:clamp(4.1rem,9.2vw,7.1rem);letter-spacing:-.085em;line-height:.94;margin:0 0 13px;font-weight:750}
+.q-publication-line{display:block;width:max-content;max-width:100%;font:600 clamp(.76rem,1.35vw,.92rem)/1.4 Manrope,system-ui,sans-serif;letter-spacing:.22em;color:#d7b8d2;text-transform:uppercase;margin:0 0 32px;padding:9px 0 9px 2px;border-top:1px solid #c9a9c855;border-bottom:1px solid #c9a9c855}
+.q-hero h1{font-size:clamp(2.15rem,4.2vw,3.45rem);line-height:1.13;letter-spacing:-.045em;margin:0}
+.q-hero h1 em,.q-sections h2 em,.q-about-grid h2 em{color:#d2a8ce}
+.q-kicker{font-size:11px;letter-spacing:.17em;color:var(--q-label)}
+.q-lede{font-size:1.12rem;line-height:1.8;color:#c2bac8;max-width:560px}
+.q-hero-foot{color:#b7aab9;font-size:11px}
+.q-hero-foot a,.q-inline-link{color:#d7b2d1}
+.q-intro-grid p{font-size:1.1rem;line-height:1.85;color:#c2bac8}
+.q-sections h2,.q-about-grid h2{font-size:clamp(2.35rem,4.4vw,3.8rem)}
+.q-category>span{font-size:11px;color:#c9a9c8}
+.q-category h3{font-size:1.48rem;line-height:1.3;margin:32px 0 12px}
+.q-category p{font-size:.98rem;line-height:1.75;color:#c2bac8}
+.q-page-hero h1{font-size:clamp(2.8rem,6vw,5rem)}
+.q-page-hero p,.q-empty p,.q-about-grid p{font-size:1.04rem;line-height:1.8;color:#c2bac8}
+.q-empty h2{font-size:1.65rem}
+.q-footer{color:#bcb1bf}
+.q-footer a{color:#d7b2d1}
+@media(max-width:520px){.q-wordmark{font-size:clamp(3.8rem,17vw,5.2rem);margin-bottom:11px}.q-publication-line{font-size:.7rem;letter-spacing:.16em;margin-bottom:26px}.q-hero h1{font-size:2.1rem}.q-category h3{font-size:1.35rem}}
+
+
+/* Thought Lab typography refresh: academic, warm and editorial */
+body:not(.quanta-site){font-family:'DM Sans',system-ui,sans-serif;line-height:1.72}
+body:not(.quanta-site) h1,body:not(.quanta-site) h2,body:not(.quanta-site) h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.035em}
+body:not(.quanta-site) .brand{font-family:'DM Sans',sans-serif;letter-spacing:.12em}
+body:not(.quanta-site) .eyebrow,body:not(.quanta-site) .tag,body:not(.quanta-site) .home-motto{font-family:'DM Sans',sans-serif;letter-spacing:.16em}
+body:not(.quanta-site) nav a{font-size:.82rem;font-weight:600;letter-spacing:.015em}
+body:not(.quanta-site) .home-intro,body:not(.quanta-site) .belief-copy p{font-size:1.04rem;line-height:1.85}
+body:not(.quanta-site) .home-hero h1{font-size:clamp(3.1rem,6.4vw,5.8rem);line-height:1.04}
+
+/* Quanta masthead logo and distinct scientific editorial artwork */
+.q-brand-logo{width:62px;height:48px;object-fit:contain;object-position:center;border-radius:7px;box-shadow:0 0 20px #b9a4ff18}
+.q-brand{gap:13px}
+.q-brand>span{font-family:'Playfair Display',Georgia,serif;font-size:.94rem;letter-spacing:.19em}
+.q-brand small{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.15em;color:#c9b9c7}
+.q-field-art{position:absolute;width:min(48vw,590px);height:470px;right:3%;top:50%;transform:translateY(-50%);overflow:hidden;pointer-events:none;opacity:.92}
+.q-field-lens{position:absolute;width:310px;height:310px;right:18%;top:17%;border-radius:50%;background:radial-gradient(circle at 50% 50%,#090d1c 0 27%,#e6b8db18 28% 29%,transparent 30%),conic-gradient(from 15deg,transparent,#d5a8cf55,transparent 22%,#8b9ce633,transparent 55%,#d7b2d155,transparent 82%);filter:drop-shadow(0 0 34px #b58acb35)}
+.q-field-lens:before,.q-field-lens:after{content:'';position:absolute;inset:-28px;border:1px solid #d7b2d155;border-radius:50%;transform:scaleY(.34) rotate(-18deg)}
+.q-field-lens:after{inset:-65px;border-color:#8e9fd044;transform:scaleY(.24) rotate(19deg)}
+.q-field-grid{position:absolute;width:130%;height:58%;left:-10%;bottom:-3%;border-radius:50% 50% 0 0;background:repeating-linear-gradient(0deg,transparent 0 18px,#b995c52b 19px 20px),repeating-linear-gradient(90deg,transparent 0 25px,#91a5d126 26px 27px);transform:perspective(340px) rotateX(62deg) rotateZ(-9deg);mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
+.q-formula{position:absolute;font-family:Georgia,serif;font-style:italic;color:#d9b8d5aa;font-size:1.2rem}
+.q-formula-one{right:4%;top:17%}.q-formula-two{right:11%;bottom:20%;font-size:1rem}
+.q-field-caption{position:absolute;left:12%;bottom:16%;font:10px 'DM Sans',sans-serif;letter-spacing:.22em;color:#c9a9c8a8}
+@media(max-width:850px){.q-field-art{right:-20%;opacity:.43;width:75vw}.q-brand-logo{width:54px;height:42px}}
+@media(max-width:520px){.q-field-art{right:-48%;width:100vw;opacity:.3}.q-brand-logo{width:48px;height:38px}}
+
+
+/* Editorial typography + independent Thought Lab homepage hero */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root{--text:#f2eee9;--muted:#c1b8bd;--accent:#c5a6f2;--violet:#d0b5ec;--line:#3a3045;--bg:#090a16}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#090a16;color:var(--text)}
+h1,h2,h3,.brand,.footer strong{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.025em}
+.site-header{background:#090a16ed;border-color:#332a40}
+.brand{font-family:'DM Sans',sans-serif;letter-spacing:.12em}
+nav a{font-family:'DM Sans',sans-serif;color:#d1c7d4}
+.eyebrow,.tag{color:#c8a8e6}
+.home-hero-redesigned{padding:0;min-height:600px;display:flex;align-items:stretch;background:#0b0b19;position:relative;isolation:isolate}
+.home-hero-redesigned:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,19,.96) 0%,rgba(7,8,19,.84) 36%,rgba(7,8,19,.2) 75%),linear-gradient(0deg,rgba(7,8,19,.65),transparent 50%),url('assets/thoughtlab-mountain.webp') center/cover no-repeat;z-index:-1}
+.home-hero-grid{display:block;min-height:600px;padding-top:80px;padding-bottom:70px;position:relative}
+.home-hero-copy{max-width:650px;padding:20px 0}
+.home-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.6rem,8vw,6.4rem);line-height:.98;letter-spacing:-.045em;color:#f4eee9;margin:25px 0 12px}
+.home-hero h1 span,.home-belief h2 span{color:#c6a5ec}
+.home-intro{font-size:1.08rem;line-height:1.75;color:#e0d8df;max-width:560px}
+.home-actions{margin-top:26px}.btn{border-color:#c6a5ec;color:#f5edf8;padding:12px 21px}.btn.primary{background:#c6a5ec;color:#171022;border-color:#c6a5ec}.home-motto{color:#c7b7d2}
+.home-visual{display:none}
+.home-belief{background:#0e0d1b;border-color:#332a40}.home-belief h2,.home-branches h2,.home-ways h2,.section-heading h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.035em}
+.branch-card,.way-card,.card,.lead-card{background:linear-gradient(145deg,#171426,#0d0d19);border-color:#3a3045}
+.branch-card h3,.way-card h3,.card h2,.card h3,.lead-card h2{font-family:'Playfair Display',Georgia,serif;font-weight:500}
+.footer{border-color:#3a3045}
+/* Quanta hero uses a different gravitational-lensing graphic, not the Thought Lab mountain image. */
+.q-hero{background:#080812 url('assets/quanta-spacetime.webp') center right/cover no-repeat;}
+.q-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,18,.97) 0%,rgba(7,8,18,.88) 42%,rgba(7,8,18,.18) 100%);pointer-events:none}
+.q-hero-inner{z-index:2}.q-field-art{display:none}
+.q-brand-logo{width:70px;height:55px;object-fit:cover;object-position:center;border-radius:8px;mix-blend-mode:screen}
+.q-brand{font-family:'DM Sans',sans-serif;letter-spacing:.13em}
+.q-wordmark{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:.02em;font-size:clamp(3.8rem,9vw,7.1rem)}
+.q-publication-line{font-size:clamp(.82rem,1.5vw,1rem);letter-spacing:.24em;color:#d7c0e8;margin:-5px 0 28px}
+.q-hero h1,.q-page-hero h1,.q-sections h2,.q-about-grid h2,.q-category h3,.q-empty h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.025em}
+.q-kicker,.q-category>span{color:#d4b9df}
+.q-category{background:linear-gradient(145deg,#171426,#0b0b17);border-color:#574765}
+.q-category:hover{border-color:#c6a5ec}
+@media(max-width:850px){.home-hero-redesigned,.home-hero-grid{min-height:550px}.home-hero-grid{padding-top:50px;padding-bottom:50px}.home-hero-redesigned:before{background-position:58% center}.q-hero{background-position:62% center}}
+@media(max-width:520px){.home-hero-redesigned,.home-hero-grid{min-height:540px}.home-hero-redesigned:before{background-image:linear-gradient(90deg,rgba(7,8,19,.94),rgba(7,8,19,.55)),linear-gradient(0deg,rgba(7,8,19,.5),transparent),url('assets/thoughtlab-mountain.webp');background-position:58% center}.home-hero h1{font-size:3.45rem}.q-brand-logo{width:54px;height:45px}.q-publication-line{letter-spacing:.15em}}
