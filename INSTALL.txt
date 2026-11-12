@@ -1,0 +1,11 @@
+THOUGHT LAB + QUANTA WEBSITE UPDATE
+
+This ZIP contains files for the Thought Lab repository only. It does not contain or modify Chandra STAR Club files.
+
+IMPORTANT: Upload the CONTENTS of this folder into the existing Thought Lab repository, preserving the current repository root and folder paths. Do not upload this outer folder as an extra nested folder.
+
+Included: Thought Lab homepage and existing pages, Quanta home and section pages, scoped assets, updated stylesheet, logo and favicon. Existing Chandra STAR Club links in the event pages are retained.
+
+The Thought Lab navigation is Home | Quanta | Projects | Activities | About. Quanta has its own navigation: Home | Articles | Research Decoded | Reviews | About.
+
+The parent Chandra STAR Club site is not included and must not be replaced. The design changes apply only to files in this Thought Lab repository.
